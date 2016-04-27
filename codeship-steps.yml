@@ -1,4 +1,5 @@
 - type: parallel
+  tag: master
   steps:
     - service: busybox
       command: echo 1!
