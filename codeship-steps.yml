@@ -3,7 +3,7 @@
     - service: busybox
       command: echo 1!
     - service: busybox
-      command: echo 2
+      command: echo 2!
     - service: busybox
       command: echo 3
     - service: busybox
