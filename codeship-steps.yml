@@ -1,7 +1,7 @@
 - type: parallel
   steps:
     - service: busybox
-      command: echo 1
+      command: echo 1!
     - service: busybox
       command: echo 2
     - service: busybox
@@ -50,4 +50,3 @@
       command: echo 24
     - service: busybox
       command: echo 25
-    
