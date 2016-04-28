@@ -1,4 +1,5 @@
 - type: parallel
+  steps:
   - service: demo
     command: sleep 2
   - type: serial
@@ -9,9 +10,6 @@
       steps:
         - service: demo
           command: echo In Between
-        - service: demo
-          tag: master
-          command: not echo
         - service: demo
           command: sleep 3
     - service: demo
