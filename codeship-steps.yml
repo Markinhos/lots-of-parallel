@@ -1,22 +1,4 @@
-- type: parallel
-  steps:
-  - service: demo
-    command: sleep 2
-  - type: serial
-    steps:
-    - service: demo
-      command: echo Before
-    - type: parallel
-      steps:
-        - service: demo
-          command: echo In Between
-        - service: demo
-          tag: master
-          command: echo Only in master
-        - service: demo
-          tag: staging
-          command: echo Only in staging
-        - service: demo
-          command: sleep 3
-    - service: demo
-      command: echo After
+- service: write
+  command: bash write_artifact.sh
+- service: read
+  command: cat /artifacts/foo
