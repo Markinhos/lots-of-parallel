@@ -11,6 +11,12 @@
         - service: demo
           command: echo In Between
         - service: demo
+          tag: master
+          command: echo Only in master
+        - service: demo
+          tag: staging
+          command: echo Only in staging
+        - service: demo
           command: sleep 3
     - service: demo
       command: echo After
